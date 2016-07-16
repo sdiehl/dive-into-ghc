@@ -1,5 +1,5 @@
-Intermediate Forms
-=============
+Core
+====
 
 Usage
 -----
