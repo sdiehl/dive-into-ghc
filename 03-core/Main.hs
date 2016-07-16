@@ -73,7 +73,6 @@ def :: [Syn.CoreBind]
 def = [Syn.NonRec fv f]
 
 f :: Syn.Expr Var
-{-f = Syn.Lam x $ Syn.Lam x (Syn.Var x)-}
 f = Syn.Lam x (Syn.Var x)
 
 modl :: Module
@@ -140,6 +139,10 @@ modloc = ModLocation
 
 showGhc :: (Outputable a) => a -> String
 showGhc = showPpr unsafeGlobalDynFlags
+
+-------------------------------------------------------------------------------
+-- Compilation
+-------------------------------------------------------------------------------
 
 main :: IO ()
 main = runGhc (Just libdir) $ do
